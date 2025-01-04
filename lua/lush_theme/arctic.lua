@@ -183,7 +183,7 @@ local theme = lush(function(injected_functions)
 		Conditional({ Statement }),
 		Repeat({ Statement }),
 		Label({ Statement }),
-		Operator({ fg = norm_fg, gui = "italic" }),
+		Operator({ fg = norm_fg }),
 		Keyword({ fg = dark_blue, gui = "italic" }),
 		Exception({ Statement }),
 
