@@ -53,7 +53,8 @@ local theme = lush(function(injected_functions)
 		-- Preset
 		--
 		TabBorder({ fg = black2 }), -- tab.border, border to separate tabs from each other
-		FloatBorder({ fg = float_border_fg }),
+		FloatBorderBase({ fg = float_border_fg }),
+		FloatBorder({ bg = black2 }),
 		SelectionHighlightBackground({ bg = "#333a40" }),
 		LightBulb({ fg = "#ffcc00" }),
 		CodeLens({ fg = "#999999" }),
@@ -508,7 +509,7 @@ local theme = lush(function(injected_functions)
 		-- LspInfoList { },
 		-- LspInfoFiletype { },
 		-- LspInfoTip { },
-		LspInfoBorder({ FloatBorder }),
+		LspInfoBorder({ FloatBorderBase }),
 
 		--
 		-- nvim-cmp
@@ -553,7 +554,7 @@ local theme = lush(function(injected_functions)
 		CmpItemKindObject({ SymbolKindObject }),
 		CmpItemKindPackage({ SymbolKindPackage }),
 		-- Predefined for the winhighlight config of cmp float window
-		SuggestWidgetBorder({ FloatBorder }),
+		SuggestWidgetBorder({ FloatBorderBase }),
 		SuggestWidgetSelect({ bg = selected_item_bg }),
 
 		--
@@ -562,7 +563,7 @@ local theme = lush(function(injected_functions)
 
 		-- Completion menu window
 		BlinkCmpMenu({ Normal }),
-		BlinkCmpMenuBorder({ FloatBorder }),
+		BlinkCmpMenuBorder({ FloatBorderBase }),
 		BlinkCmpMenuSelection({ bg = selected_item_bg, gui = "bold" }),
 		BlinkCmpScrollBarThumb({ ScrollbarSlider }),
 		BlinkCmpScrollBarGutter({ ScrollbarGutter }),
@@ -708,7 +709,7 @@ local theme = lush(function(injected_functions)
 		--
 		-- Telescope
 		--
-		TelescopeBorder({ FloatBorder }),
+		TelescopeBorder({ FloatBorderBase }),
 		TelescopePromptBorder({ TelescopeBorder }),
 		TelescopeResultsBorder({ TelescopePromptBorder }),
 		TelescopePreviewBorder({ TelescopePromptBorder }),
@@ -813,7 +814,7 @@ local theme = lush(function(injected_functions)
 		--
 		-- TreesitterContext { bg = black4 },
 		TreesitterContextLineNumber({ fg = "#5d5d5d" }), -- 30% darker based on LineNr
-		TreesitterContextBottom({ gui = "underline", sp = FloatBorder.fg }),
+		TreesitterContextBottom({ gui = "underline", sp = FloatBorderBase.fg }),
 
 		--
 		-- nvim-scrollview
@@ -834,7 +835,7 @@ local theme = lush(function(injected_functions)
 		-- vim-floaterm
 		--
 		Floaterm({ Normal }),
-		FloatermBorder({ FloatBorder }),
+		FloatermBorder({ FloatBorderBase }),
 
 		--
 		-- quick-scope
